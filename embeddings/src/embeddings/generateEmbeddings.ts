@@ -189,6 +189,12 @@ export const generateEmbeddings: GenerateEmbeddings<never, string> = async (_arg
       // This option tells the client not to resolve the promise until the
       // index is ready. It replaces waitUntilIndexIsReady.
       waitUntilReady: true,
+      spec: {
+        serverless: {
+          cloud: "aws",
+          region: "us-east-1",
+        },
+      },
     });
 
     const pineconeIndex = pinecone.Index('embeds-test');

@@ -4,7 +4,6 @@ export type { PineconeRecord } from '@pinecone-database/pinecone';
 
 export const initPinecone = async () => {
   return new Pinecone({
-    environment: process.env.PINECONE_ENV!,
     apiKey: process.env.PINECONE_API_KEY!,
   });
 };
